@@ -1,0 +1,7 @@
+let money = 1584;
+let price = 600; 
+if (money >= price) {
+  console.log("Денег достаточно для покупки товара.");
+} else {
+  console.log("Недостаточно денег для покупки товара.");
+}
