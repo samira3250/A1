@@ -1,0 +1,9 @@
+let ab = "пешком";
+let bc = "автобусе";
+let cd1 = "пешком";
+let cd2 = "на такси";
+let ad = "пешком";
+let wait_time = 10;
+console.log("Вариант 1: A -> B (" + ab + ") -> C (" + bc + ", ожидание " + wait_time + " минут) -> D (" + cd1 + ")");
+console.log("Вариант 2: A -> B (" + ab + ") -> C (" + bc + ", ожидание " + wait_time + " минут) -> D (" + cd2 + ")");
+console.log("Вариант 3: A -> D (" + ad + ")");
