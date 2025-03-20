@@ -1,0 +1,18 @@
+let a = 24;
+let b = 6;
+let c = 4;
+let d = 3;
+let x = 8; 
+if (x > a) {
+  console.log("x > a");
+} else if (x < d) {
+  console.log("x < d");
+} else if (x > b && x < a) {
+  console.log("a > x > b");
+} else if (x > c && x < b) {
+  console.log("b > x > c");
+} else if (x > d && x < c) {
+  console.log("c > x > d");
+} else {
+    console.log("Ошибка!");
+}
