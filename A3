@@ -1,9 +1,30 @@
-let ab = "пешком";
-let bc = "автобусе";
-let cd1 = "пешком";
-let cd2 = "на такси";
-let ad = "пешком";
-let wait_time = 10;
-console.log("Вариант 1: A -> B (" + ab + ") -> C (" + bc + ", ожидание " + wait_time + " минут) -> D (" + cd1 + ")");
-console.log("Вариант 2: A -> B (" + ab + ") -> C (" + bc + ", ожидание " + wait_time + " минут) -> D (" + cd2 + ")");
-console.log("Вариант 3: A -> D (" + ad + ")");
+function findFasterRoute(ab, bc1, cd, ad) {
+  const waitTime = 10; 
+  const busRouteTime = ab + waitTime + bc1 + cd;
+  const walkRouteTime = ad;
+  console.log("Путь на автобусе:");
+  console.log(`  AB (пешком): ${ab} минут`);
+  console.log(`  Ожидание автобуса: ${waitTime} минут`);
+  console.log(`  BC (на автобусе): ${bc1} минут`);
+  console.log(`  CD (пешком): ${cd} минут`);
+  console.log(`  Общее время (автобус): ${busRouteTime} минут`);
+  console.log("\nПуть пешком:");
+  console.log(`  AD (пешком): ${ad} минут`);
+  console.log(`  Общее время (пешком): ${walkRouteTime} минут`);
+  if (busRouteTime < walkRouteTime) {
+    console.log("\nВывод: Быстрее на автобусе.");
+  } else if (walkRouteTime < busRouteTime) {
+    console.log("\nВывод: Быстрее пешком.");
+  } else {
+    console.log("\nВывод: Пути одинаковы.");
+  }
+  console.log("\n---"); 
+}
+console.log("Пример 1:");
+findFasterRoute(5, 3, 2, 12); 
+console.log("Пример 2:");
+findFasterRoute(5, 3, 2, 9);  
+console.log("Пример 3:");
+findFasterRoute(5, 3, 2, 20); 
+console.log("Пример 4:");
+findFasterRoute(15, 5, 5, 20);
